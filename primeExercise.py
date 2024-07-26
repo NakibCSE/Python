@@ -1,23 +1,26 @@
-import math
-def is_prime(n):
-    if n < 2:
-        return False
+import math 
+
+def isPrime(n):
     if n == 2:
         return True
+    if n < 2:
+        return False
     if n % 2 == 0:
         return False
-    m = math.sqrt(n)
-    m = int(m) + 1
-    for x in range(3,m,2):
-        if n%x==0:
-            return False
-    return True
+    prime = True
+    m = int(math.sqrt(n) + 1)
+    for i in range(3, m, 2):
+        if n % i == 0:
+            prime = False
+            return prime
+    return prime
 
-number1 = int(input("Enter a number: "))
-number2 = int(input("Enter another number: "))
 
-for x in range(number1, number2):
-    if(is_prime(x)):
-        print(x," is a prime number")
-    else:
-        print(x," is not a prime number")
+n1 = 1
+n2 = 100
+
+for i in range(n1, n2):
+    if isPrime(i) == True:
+        print(i)
+
+

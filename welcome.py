@@ -1,2 +1,3 @@
-name = input("What's your Name? ")
-print("Welcome to python ",name, "!")
+#input method to read the input from user
+name = input("What is your name? :")
+print("Wrlcome to Python,", name, "!")
